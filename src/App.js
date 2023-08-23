@@ -8,6 +8,7 @@ import {
 	Favoritos,
 	Header,
 	ShowLine,
+	Sobre,
 } from "./assets/style";
 import {
 	AiOutlineSearch,
@@ -84,6 +85,26 @@ function App() {
 					</div>
 				</div>
 			</Favoritos>
+			<Sobre>
+				<div className='container-sobre'>
+					<div className='title-box-sobre'>
+						<h3 className='title-sobre'>Kah Candy Lover</h3>
+						<Line />
+					</div>
+					<p className='paragrafo-sobre'>
+						Fundada em 2023 por Kamylle Dos Santos, a Kah Candy Lover surge com
+						o objetivo de acrescentar mais sabor à vida das pessoas. <br />{" "}
+						Iniciando suas atividades durante a Páscoa, a empresa lançou-se no
+						mercado oferecendo ovos recheados e caixas de brigadeiro. Com o
+						tempo, expandiu sua linha de produtos para incluir trufas e cones
+						trufados, que rapidamente se tornaram os favoritos entre os
+						consumidores. <br /> Além disso, a Kah Candy Lover atende a demandas
+						maiores, aceitando encomendas para festas, aniversários e ocasiões
+						comemorativas. Seu catálogo abrange uma ampla variedade de produtos,
+						como bolos, tortas, cones trufados, trufas e ovos recheados.
+					</p>
+				</div>
+			</Sobre>
 		</div>
 	);
 }

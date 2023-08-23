@@ -99,3 +99,33 @@ export const Favoritos = styled.div`
 		align-self: center;
 	}
 `;
+
+export const Sobre = styled.div`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	.container-sobre {
+		margin: 30px 15px;
+		border: 1px solid rgb(20, 17, 120);
+		padding: 5px;
+	}
+	.title-box-sobre {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.title-sobre {
+		font-size: 6vw;
+		color: rgb(20, 17, 120);
+		font-family: "Montserrat", sans-serif;
+		font-weight: 600;
+	}
+	.paragrafo-sobre {
+		font-size: 4vw;
+		margin: 15px 8px;
+		font-family: "Poppins", sans-serif;
+		font-weight: 400;
+	}
+`;
