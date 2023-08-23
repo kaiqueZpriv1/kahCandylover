@@ -3,7 +3,7 @@
 import styled from "styled-components";
 
 export const Header = styled.header`
-	background: #ffe5e5;
+	background: #fce9f1;
 	width: 100%;
 	.container-header {
 		display: flex;
@@ -127,5 +127,19 @@ export const Sobre = styled.div`
 		margin: 15px 8px;
 		font-family: "Poppins", sans-serif;
 		font-weight: 400;
+	}
+`;
+
+export const Store = styled.div`
+	margin: 30px 0;
+	.scroll-store {
+		width: 100%;
+		display: flex;
+		overflow-x: auto;
+	}
+	.container-store {
+		display: flex;
+		align-items: center;
+		gap: 10px;
 	}
 `;

@@ -9,15 +9,13 @@ import {
 	Header,
 	ShowLine,
 	Sobre,
+	Store,
 } from "./assets/style";
-import {
-	AiOutlineSearch,
-	AiOutlineShoppingCart,
-	AiOutlineMenu,
-} from "react-icons/ai";
+import { AiOutlineSearch, AiOutlineMenu } from "react-icons/ai";
 import ShowComponents from "./assets/components/showline/ShowComponents";
 import FavoritosComponents from "./assets/components/favoritosline/FavoritosComponents";
 import Line from "./assets/components/lineComponent/Line";
+import StoreComponents from "./assets/components/store/StoreComponents";
 
 function App() {
 	const [touchStartX, setTouchStartX] = useState(null);
@@ -60,9 +58,6 @@ function App() {
 			</Header>
 			{/* novidades */}
 			<ShowLine>
-				{/* <div className='header-show'>
-					<h3>Novidades !</h3>
-				</div> */}
 				<div
 					className='showScroll'
 					onTouchStart={handleTouchStart}
@@ -105,6 +100,17 @@ function App() {
 					</p>
 				</div>
 			</Sobre>
+			<Store>
+				<div
+					className='scroll-store'
+					onTouchStart={handleTouchStart}
+					onTouchMove={handleTouchMove}
+					onTouchEnd={handleTouchEnd}>
+					<div className='container-store'>
+						<StoreComponents />
+					</div>
+				</div>
+			</Store>
 		</div>
 	);
 }
