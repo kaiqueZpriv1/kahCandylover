@@ -82,6 +82,8 @@ export const Favoritos = styled.div`
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		flex-direction: column;
+		margin: 20px 0;
 	}
 	.header-favoritos h3 {
 		font-size: 8vw;

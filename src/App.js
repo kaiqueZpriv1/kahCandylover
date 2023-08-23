@@ -16,6 +16,7 @@ import {
 } from "react-icons/ai";
 import ShowComponents from "./assets/components/showline/ShowComponents";
 import FavoritosComponents from "./assets/components/favoritosline/FavoritosComponents";
+import Line from "./assets/components/lineComponent/Line";
 
 function App() {
 	const [touchStartX, setTouchStartX] = useState(null);
@@ -76,6 +77,7 @@ function App() {
 				<div className='container-favoritos'>
 					<div className='header-favoritos'>
 						<h3>Favoritos</h3>
+						<Line />
 					</div>
 					<div className='container-box-favoritos'>
 						<FavoritosComponents />
