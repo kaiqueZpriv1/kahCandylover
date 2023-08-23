@@ -20,16 +20,19 @@ export const CenterHeader = styled.div`
 	display: flex;
 	flex-direction: column;
 	.name h3 {
-		font-size: 7vw;
+		font-size: 6vw;
 		font-family: "Montserrat", sans-serif;
 		color: rgb(20, 17, 120);
 	}
 	.search {
 		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 	.search input {
 		padding: 5px;
 		border-radius: 20px;
+		text-align: center;
 		border: 1px solid rgb(20, 17, 120);
 	}
 	.search-icon {

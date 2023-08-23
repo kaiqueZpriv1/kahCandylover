@@ -18,7 +18,7 @@ export const Favoritos = styled.div`
 		margin: 5px 0;
 	}
 	.footer-container h3 {
-		font-size: 7vw;
+		font-size: 6vw;
 		color: rgb(20, 17, 120);
 		font-weight: 700;
 		font-family: "Montserrat", sans-serif;
