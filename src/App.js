@@ -3,15 +3,15 @@ import React, { useState } from "react";
 import LogoComponents from "./assets/components/LogoComponents";
 import "./assets/css/reset.css";
 import {
-	CarList,
 	CenterHeader,
 	Favoritos,
 	Header,
+	MenuBurger,
 	ShowLine,
 	Sobre,
 	Store,
 } from "./assets/style";
-import { AiOutlineSearch, AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineSearch, AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import ShowComponents from "./assets/components/showline/ShowComponents";
 import FavoritosComponents from "./assets/components/favoritosline/FavoritosComponents";
 import Line from "./assets/components/lineComponent/Line";
@@ -22,13 +22,13 @@ function App() {
 	const [scrollLeft, setScrollLeft] = useState(0);
 
 	const handleTouchStart = (e) => {
-		setTouchStartX(e.touch[0].clientX);
+		setTouchStartX(e.touches[0].clientX);
 	};
 	const handleTouchMove = (e) => {
 		if (touchStartX !== null) {
-			const touchMoveX = e.touch[0].clientX;
-			const scrollAmont = touchStartX - touchMoveX;
-			setScrollLeft(scrollLeft + scrollAmont);
+			const touchMoveX = e.touches[0].clientX;
+			const scrollAmount = touchStartX - touchMoveX;
+			setScrollLeft(scrollLeft + scrollAmount);
 			setTouchStartX(touchMoveX);
 		}
 	};
@@ -36,7 +36,13 @@ function App() {
 	const handleTouchEnd = () => {
 		setTouchStartX(null);
 	};
-
+	const [menuOpen, setMenuOpen] = useState(false);
+	const handleMenuToggle = () => {
+		setMenuOpen((prevState) => !prevState);
+	};
+	const handleLinkMenu = () => {
+		setMenuOpen(false);
+	};
 	return (
 		<div className='App'>
 			<Header>
@@ -51,9 +57,31 @@ function App() {
 							<AiOutlineSearch className='search-icon' size={25} />
 						</div>
 					</CenterHeader>
-					<CarList>
-						<AiOutlineMenu size={40} />
-					</CarList>
+					<div className='burger'>
+						<button onClick={handleMenuToggle}>
+							{menuOpen ? (
+								<AiOutlineClose size={40} color='rgba(20, 17, 120)' />
+							) : (
+								<AiOutlineMenu size={40} color='rgba(20, 17, 120)' />
+							)}
+						</button>
+					</div>
+					<div className='menu' style={{ width: menuOpen ? "100%" : "0" }}>
+						<div className='container-menu'>
+							<a onClick={handleLinkMenu} href='...' className='linkMenu'>
+								inicio
+							</a>
+							<a onClick={handleLinkMenu} href='...' className='linkMenu'>
+								inicio
+							</a>
+							<a onClick={handleLinkMenu} href='...' className='linkMenu'>
+								inicio
+							</a>
+							<a onClick={handleLinkMenu} href='...' className='linkMenu'>
+								inicio
+							</a>
+						</div>
+					</div>
 				</div>
 			</Header>
 			{/* novidades */}

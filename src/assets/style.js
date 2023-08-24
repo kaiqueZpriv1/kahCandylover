@@ -7,8 +7,34 @@ export const Header = styled.header`
 	width: 100%;
 	.container-header {
 		display: flex;
-		justify-content: space-between;
+		/* justify-content: space-between; */
 		align-items: center;
+	}
+	.burger {
+		transition: 1s;
+		position: fixed;
+		z-index: 9;
+		top: 0;
+		right: 10px;
+		top: 20px;
+	}
+	.burger button {
+		background: transparent;
+		border: none;
+	}
+	.menu {
+		background: #fce9f1;
+		display: flex;
+		height: 800px;
+		flex-direction: column;
+		position: fixed;
+		transition: 0.5s;
+		overflow: hidden;
+		z-index: 8;
+	}
+	.linkMenu {
+		color: #000;
+		z-index: 9;
 	}
 `;
 export const Logo = styled.div`
@@ -19,6 +45,7 @@ export const Logo = styled.div`
 export const CenterHeader = styled.div`
 	display: flex;
 	flex-direction: column;
+	margin-left: 20px;
 	.name h3 {
 		font-size: 6vw;
 		font-family: "Montserrat", sans-serif;
@@ -40,10 +67,6 @@ export const CenterHeader = styled.div`
 		right: 30px;
 		color: rgb(20, 17, 120);
 	}
-`;
-export const CarList = styled.div`
-	margin-right: 10px;
-	color: rgb(20, 17, 120);
 `;
 
 export const ShowLine = styled.div`
